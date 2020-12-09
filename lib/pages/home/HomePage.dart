@@ -23,34 +23,16 @@ class _HomePageState extends State<HomePage>{
     ScreenUtil.init(context, width: ConfigData.width, height: ConfigData.width, allowFontScaling: true);
     return Scaffold(
       appBar: AppBar(
-        title: Text('text'),
+        title: Text('组件列表'),
       ),
       body: Column(
         children: <Widget>[
           FlatButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/product', arguments: { 'productId': '1111' });
+              Navigator.pushNamed(context, '/search');
             },
-            child: Text('点击我跳转商品页面并携带参数'),
+            child: Text('搜索Search'),
           ),
-          FlatButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/detail');
-            },
-            child: Text('点击我提起去请求数据和展示的demo页面'),
-          ),
-          FlatButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/tools');
-            },
-            child: Text('点击跳转工具页面'),
-          ),
-          FlatButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/provider');
-            },
-            child: Text('点击跳转providerDemo'),
-          )
         ],
       )
     );

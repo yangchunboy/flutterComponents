@@ -1,22 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:app/theme/ColorTheme.dart';
+import 'package:app/theme/FontTheme.dart';
 
 class ThemeStyle {
-  static const Color primary = Colors.white;
-  static const Color dark_primary = Colors.red;
 
   static ThemeData light() {
     return ThemeData(
-      primaryColor: primary,
-      // textTheme: 
-      // dialogBackgroundColor: dark_primary
-      // accentColor: primary
+      primaryColor: LightColor.primary,
+      textTheme: TextTheme(
+        bodyText1: TextStyle(
+          fontSize: FontTheme.text,
+          color: LightColor.description
+        ),
+        bodyText2: TextStyle(
+          fontSize: FontTheme.text,
+          color: LightColor.textColor
+        )
+      ),
+      backgroundColor: LightColor.background,
+      disabledColor: LightColor.description,
     );
   }
 
+
   static ThemeData dark() {
     return ThemeData(
-      primaryColor: dark_primary,
-      accentColor: dark_primary
+      primaryColor: DarkColor.primary,
+      accentColor: DarkColor.textColor
     );
   }
 
