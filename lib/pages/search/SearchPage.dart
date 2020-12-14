@@ -1,5 +1,7 @@
+import 'package:app/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/screenutil.dart';
+import 'package:app/components/MyTextField/MyTextField.dart';
 
 class SearchPage extends StatefulWidget {
   @override
@@ -38,15 +40,19 @@ class _SearchState extends State <SearchPage>{
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Icon(
-              Icons.search,
-              color: Theme.of(context).disabledColor
-            ),
-            Text(
-              '搜索',
-              style: TextStyle(
+            Padding(
+              padding: EdgeInsets.only(right: 6),
+              child: Icon(
+                Icons.search,
                 color: Theme.of(context).disabledColor
               ),
+            ),
+            MyTextField(
+              placeholder: '请输入搜索关键字',
+              textInputAction: TextInputAction.search,
+              onSubmitted: (text) {
+                Utils.showToast('关键词是：$text');
+              }
             )
           ]
         ),
