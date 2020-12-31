@@ -72,7 +72,7 @@ class _Refresh extends State<Refresh> {
             bottomBouncing: true,
             firstRefresh: false,
             // firstRefreshWidget: _getFirstRefreshWidget(),
-            emptyWidget: null,
+            emptyWidget: widget.emptyWidget,
             header: getHeaderWidget(),
             footer: getFooterWidget(),
             onRefresh: ()async {

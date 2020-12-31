@@ -29,11 +29,6 @@ class RefreshText {
 
 
 class RefreshIcon {
-  // static const IconData list_update_fail = IconData(57729, fontFamily: 'MaterialIcons');
-
-  // static const IconData list_update_complete = IconData(59087, fontFamily: 'MaterialIcons');
-
-  // static const IconData list_update_pull = IconData(59372, fontFamily: 'MaterialIcons');
 
   static const IconData list_update_fail = Icons.error_outline;
 
