@@ -33,6 +33,18 @@ class _HomePageState extends State<HomePage>{
             },
             child: Text('搜索Search'),
           ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/delete');
+            },
+            child: Text('左滑删除'),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/refresh');
+            },
+            child: Text('下拉刷新，上拉加载'),
+          )
         ],
       )
     );

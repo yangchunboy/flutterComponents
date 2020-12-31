@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:app/pages/home/HomePage.dart';
 import 'package:app/pages/login/loginPage.dart';
 import 'package:app/pages/search/SearchPage.dart';
+import 'package:app/pages/delete/DeletePage.dart';
+import 'package:app/pages/refresh/RefreshPage.dart';
 
 
 class Router {
@@ -10,7 +12,9 @@ class Router {
     '/': (params) => HomePage(),
     '/search': (params) => SearchPage(),
     '/tools': (params) => ToolsPage(),
-    '/login': (params) => LoginPage()
+    '/login': (params) => LoginPage(),
+    '/delete': (params) => DeletePage(),
+    '/refresh': (params) => RefreshPage()
   };
 
   static onGenerateRoute(RouteSettings settings) {
