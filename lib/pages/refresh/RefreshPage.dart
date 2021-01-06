@@ -1,6 +1,6 @@
 import 'package:app/utils/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:app/components/Fresh/Fresh.dart';
+import 'package:app/components/Fresh/Refresh.dart';
 
 class RefreshPage extends StatefulWidget{
     _RefreshState createState() => _RefreshState();

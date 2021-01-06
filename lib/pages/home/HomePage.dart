@@ -44,6 +44,12 @@ class _HomePageState extends State<HomePage>{
               Navigator.pushNamed(context, '/refresh');
             },
             child: Text('下拉刷新，上拉加载'),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/timer');
+            },
+            child: Text('倒计时'),
           )
         ],
       )
