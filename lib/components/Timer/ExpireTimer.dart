@@ -48,11 +48,12 @@ class _ExpireTimer extends State<ExpireTimer> {
     Timer.periodic(Duration(seconds: 1), (timer) { 
       if (count == 0) {
         timer.cancel();
+      } else {
+        setState(() {
+          count--;
+          timeString = getTimeString(count);
+        });
       }
-      setState(() {
-        count--;
-        timeString = getTimeString(count);
-      });
     });
   }
 
