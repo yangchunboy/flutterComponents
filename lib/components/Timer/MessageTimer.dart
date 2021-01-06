@@ -59,16 +59,18 @@ class _CodeTimeState extends State<MessageTimer> {
   void _initTimer() {
     timer = new Timer.periodic(Duration(seconds: 1), (Timer timer) {
       //数据操作处理
-      setState(() {
-        if (count == 1) {
-          timer.cancel(); //倒计时结束取消定时器
-          count = widget.count; //重置时间
-          codeText = '重新发送';
-        } else {   
-          count--;
-          codeText = '重新发送($count)';
-        }
-      });
+      if (mounted) {
+        setState(() {
+          if (count == 1) {
+            timer.cancel(); //倒计时结束取消定时器
+            count = widget.count; //重置时间
+            codeText = '重新发送';
+          } else {   
+            count--;
+            codeText = '重新发送($count)';
+          }
+        });
+      }
     });
   }
 

@@ -49,10 +49,12 @@ class _ExpireTimer extends State<ExpireTimer> {
       if (count == 0) {
         timer.cancel();
       } else {
-        setState(() {
-          count--;
-          timeString = getTimeString(count);
-        });
+        if (mounted) {
+          setState(() {
+            count--;
+            timeString = getTimeString(count);
+          });
+        }
       }
     });
   }

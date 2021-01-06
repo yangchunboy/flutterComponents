@@ -26,9 +26,10 @@ class _HomePageState extends State<HomePage>{
         title: Text('组件列表'),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          FlatButton(
-            onPressed: () {
+          GestureDetector(
+            onTap: () {
               Navigator.pushNamed(context, '/search');
             },
             child: Text('搜索Search'),
