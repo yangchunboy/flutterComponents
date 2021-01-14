@@ -51,6 +51,12 @@ class _HomePageState extends State<HomePage>{
               Navigator.pushNamed(context, '/timer');
             },
             child: Text('倒计时'),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/cell');
+            },
+            child: Text('单元格Cell'),
           )
         ],
       )

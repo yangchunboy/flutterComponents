@@ -47,5 +47,9 @@ class Utils {
 
   static void showConfirmDialog(BuildContext context,String content, Function confirmCallback) {
     showConfirmDialogFun(context, content, confirmCallback);
-  } 
+  }
+
+  static String getImageUrl(String name, { String type = 'png'}) {
+    return 'assets/images/$name.$type';
+  }
 }

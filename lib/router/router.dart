@@ -6,6 +6,7 @@ import 'package:app/pages/search/SearchPage.dart';
 import 'package:app/pages/delete/DeletePage.dart';
 import 'package:app/pages/refresh/RefreshPage.dart';
 import 'package:app/pages/timer/TimerPage.dart';
+import 'package:app/pages/cell/CellPage.dart';
 
 
 class Router {
@@ -16,7 +17,8 @@ class Router {
     '/login': (params) => LoginPage(),
     '/delete': (params) => DeletePage(),
     '/refresh': (params) => RefreshPage(),
-    '/timer': (params) => TimerPage()
+    '/timer': (params) => TimerPage(),
+    '/cell': (params) => CellPage()
   };
 
   static onGenerateRoute(RouteSettings settings) {
