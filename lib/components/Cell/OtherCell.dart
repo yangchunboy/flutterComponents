@@ -8,7 +8,7 @@ class OtherCell extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      height: 40,
+      // height: 40,
       child: ListTile(
         title: Row(
           children: <Widget>[
